@@ -1,0 +1,43 @@
+AS ANAMUL V1 — COMPLETE DEPLOY GUIDE
+
+এই ZIP-এ দুটি আলাদা Netlify site আছে:
+1) USER_PANEL
+2) ADMIN_PANEL
+
+গুরুত্বপূর্ণ: Netlify Drop/drag-and-drop দিয়ে Functions deploy না করে GitHub Import ব্যবহার করো।
+
+A) USER PANEL
+- USER_PANEL folder-এর ভেতরের সব ফাইল একটি GitHub repository-তে upload করো।
+- Netlify → Add new site → Import an existing project → GitHub।
+- Build command: ফাঁকা
+- Publish directory: .
+- Deploy।
+- Deploy শেষে User URL হবে যেমন:
+  https://premiumuserpanel4.netlify.app
+
+B) ADMIN PANEL
+- ADMIN_PANEL folder-এর ভেতরের সব ফাইল আলাদা GitHub repository-তে upload করো।
+- Netlify → Add new site → Import an existing project → GitHub।
+- Build command: ফাঁকা
+- Publish directory: .
+- Deploy।
+
+C) ADMIN LOGIN
+Admin Panel-এ:
+User/API URL:
+https://premiumuserpanel4.netlify.app
+
+Password:
+ANAMUL
+
+তারপর SAVE API URL → LOGIN & CONNECT।
+
+D) TEST
+1. Admin → GENERATE NEW AS_KEY → 1 HOUR।
+2. Key copy করো।
+3. User Panel-এ key paste → VALIDATE ACCESS।
+4. Admin → RESET / REVOKE।
+5. একই key আবার validate করলে invalid হবে।
+6. GET KEY-এর link দরকার হলে Admin-এ short link save করো।
+
+যদি GitHub ব্যবহার করো, ZIP-এর parent folder নয়; USER_PANEL-এর contents একটি repo-তে এবং ADMIN_PANEL-এর contents অন্য repo-তে রাখবে।

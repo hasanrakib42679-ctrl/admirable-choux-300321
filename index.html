@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AS ANAMUL V1 • Admin</title><link rel="stylesheet" href="style.css">
+</head>
+<body><main class="card">
+<h1>AS ANAMUL V1</h1><div class="sub">PRIVATE ADMIN PANEL</div>
+<label>USER / API SITE URL</label>
+<input id="api" value="https://premiumuserpanel4.netlify.app">
+<button id="save">SAVE API URL</button>
+<p>শুধু User Panel-এর মূল URL দাও। /.netlify/functions/api দেবে না।</p>
+<input id="pass" type="password" placeholder="ADMIN PASSWORD">
+<button id="login">LOGIN & CONNECT</button>
+<div id="status">● NOT CONNECTED</div>
+<section id="controls" hidden>
+<label>DURATION</label><div class="row"><input id="num" type="number" min="1" value="1"><select id="unit"><option value="minutes">MINUTES</option><option value="hours" selected>HOURS</option><option value="days">DAYS</option></select></div>
+<button id="gen">GENERATE NEW AS_KEY</button>
+<div id="key">NO ACTIVE KEY</div><button id="copy">COPY KEY</button><button id="reset">RESET / REVOKE CURRENT KEY</button>
+<label>GET KEY SHORT LINK</label><input id="short"><button id="saveShort">SAVE SHORT LINK</button>
+</section><div id="msg"></div></main><script src="app.js"></script></body></html>
